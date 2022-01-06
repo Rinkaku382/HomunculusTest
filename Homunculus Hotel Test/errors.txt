@@ -1,0 +1,12 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 158: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    """
+            """
+              ^
+
+Ren'Py Version: Ren'Py 7.4.6.1693
+Tue Jan  4 16:28:26 2022
