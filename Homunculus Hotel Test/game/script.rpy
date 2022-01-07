@@ -18,6 +18,8 @@ define isa = Character("Isabelle", color="#c45151", what_xpos=1675, what_ypos=-4
 define h = Character("Her", color="#5d6f5c", what_xpos=255, what_ypos=-450, who_ypos=-550, who_xpos=12)
 define y = Character("Yasu", color="#c6943d", what_xpos=1675, what_ypos=-450, who_ypos=-550, who_xpos=1420)
 define c = Character("Claire", color="#5d6f5c", what_xpos=1675, what_ypos=-450, who_ypos=-550, who_xpos=1420)
+define s = Character("Stefan", color="#c6943d", what_xpos=1675, what_ypos=-450, who_ypos=-550, who_xpos=1420)
+define j = Character("Julie", color="#5d6f5c", what_xpos=1675, what_ypos=-450, who_ypos=-550, who_xpos=1420)
 
 label start:
     $ yasu_comp = False
@@ -25,87 +27,78 @@ label start:
     $ stefan_comp = False
     $ julie_comp = False
     $ kim_comp = False
-    $ take_comp = False
+    $ takeshi_comp = False
     $ stories_comp = 0
     stop music fadeout(2)
     scene black
     with slowerfade
     play music "toherenevercome.ogg" fadein(2)
     $ renpy.pause(0.5)
-    play movie "intro1.ogv" loop
-    show movie with slowdissolve
-    isa """
-    You\nknow\nwhat?
-    """
-    h "Hmm?"
-    isa """
-    I love\nhaving breakfast\nwith you.
-
-    It feels so...\npeaceful,\nfor once."""
+    scene school2
+    with slowfade
     h """
-    What do you mean?
+    Isabelle...
+
+    Isn't\nthis sky\nbeautiful?
     """
     isa """
-    Well,\nyou know...
-
-    Lately\nit's been\npretty stressful.
-    """
-    play movie "intro2.ogv" loop
-    show movie with dissolve
-    h "Do you\nsay that\nbecause of me?"
-    isa """
-    No,\nit's just...
-
-    You've been\nfeeling down\nand i'm worried\nfor you.
+    Hmmm\nit's ok,\nI guess.
     """
     h """
-    You\ndon't have\nto be.
+    You\ncan't see it,\nhuh?
 
-    It's\nnot your fault\nafter all.
+    The shades\nof blue.
 
-    I'm just...\nso tired.
-    """
-    scene intro3
-    with slowdissolve
-    stop movie
-    isa "I know,\nbut you are\nso miserable..."
-    h """
-    Please\ndon't pity me.
+    The clouds\ngently floating.
 
-    I get\nenough of that\nat work.
-    """
-    isa """
-    Then maybe...
+    Oh,\nlook!
 
-    You should\ndo something\ndifferent.
-    """
-    h """
-    ...what?
+    There's\na butterfly flying\nover there!
 
-    Is this\nwhat it's\nabout?
-    """
-    scene intro4
-    with slowdissolve
-    isa """
-    I only want\nwhat's best\nfor you,\nyou know that.
+    I envy them\na lot,\nyou know?
 
-    If your job\ndoesn't make you\nhappy,\nthen-
-    """
-    h """
-    Enough.
+    I'd like to be\nas free\nas they are.
 
-    I know\nwhat this\nis about.
+    Flying\nall around.
 
-    After all,\nI don't pretend\nto be understood.
-    """
-    isa """
-    No,\nI understand!
+    Free to be\nas I am.
 
-    You know\nI do!
+    Hmmm...
 
-    I\nlove you\nso much!
+    When I\nlook around\nmyself...
+
+    I realize that\nno one\nis free.
+
+    We are\ncocoons\nwalking around.
+
+    Unaware of\nwhat or who\nwe could be.
+
+    We accept\nwhat is more\ncomfortable.
+
+    And avoid\nour dreams.
+
+    But it's not\nour fault.
+
+    The world\nis changing\nfor the worst.
+
+    And it builds\nmore and more\ntraps...
+
+    To convince us\nthat a good wage\nis enough to\nbe happy.
+
+    That a good job\ncan make us\nenjoy life.
+
+    And,\nby believing\nthis lie,\nwe kill ourselves.
+
+    This is\nthe true suicide,\nfor me.
+
+    I wish\nwe could live\nthrough this sky,\nthrough our dreams.
     """
     stop music fadeout(2)
+    jump segment1
+
+######## START OF SEGMENT 1 #########################################################################################
+
+label segment1:
     scene day0
     with slowfade
     $ renpy.pause(3)
@@ -113,133 +106,111 @@ label start:
     scene desk
     with slowdissolve
     """
-    I still remember that time...
+    I still remember our time together...
 
-    It seems like ages ago, now.
-
-    And yet, even though so much has happened...
+    When we met, when we were together, when we left each other.
 
     Those events still affect me.
 
-    And, sometimes, that apartment fades into this hotel room.
+    And, sometimes, that scenery fades into this hotel room.
 
-    Since I came here, each day has had the same routine...
+    Here in the Homunculus Hotel,\npeople find refuge from the world's danger and uncertainties.
 
-    Wake up.
+    They get here in order to find a place that could be safe,\none that could help them get better.
 
-    Let the day flow.
+    That's why all the rooms are always occupied by someone.
 
-    Get back to the room.
+    And you can see them, walking through the corridors or having a lonely breakfast.
 
-    Now that I think about it...
+    Passing by the courtyard...each of them alone.
 
-    Things weren't any different before.
+    The first day I spent here seems so far away, now.
 
-    For now, anyway, I just need to write down today's entry.
+    First a guest, then a member of the staff.
 
-    And then go to bed.
+    I think it's been three years,\nand I've been writing this diary only for the last two months.
 
-    Just as usual.
+    I came to this hotel...
+
+    Well, because someone told me that\nthe rooms show the guests' personal and intimate dreams.
+
+    Dreams from the past.\nDreams of possible and multiple futures.\nDreams of fears or desired achievements.
+
+    But it's not so simple to understand them, right?
+
+    We can't always fully interpret our own dreams...
+
+    And that's my job, helping others in understanding the dreams that their rooms show.
+
+    Ironic, though...
+
+    I've helped a lot of people,\nbut I'm totally unable to see my dream.
+
+    And memories are now tormenting me with no end.
+
+    A torture that seems endless, in nights such as this...
+
+    So I give up.
+
+    Tonight I just want to remember.
+
+    Maybe thinking about the people I've met and helped will help me as well...
     """
     jump deskscreenintro
-
 label deskscreenintro:
     call screen deskintro
-
 label flowerintro:
     """
     These flowers always make me remember...
 
-    That's why I try to keep them alive so hard.
+    We used to fill our home with them.
+
+    And every morning, after breakfast, we tended to them.
+
+    It's only because of you that\nI try to keep these alive so hard.
     """
     jump deskscreenintro
 label calendarintro:
-    if julie_comp == True:
-        """
-        Dear Julie...
+    """
+    Time passes.
 
-        Time passes endlessly.
+    Days go by.
 
-        Sometimes slowly, other times rapidly.
+    Here, on this calendar, the appointments of last month are all marked.
 
-        And I often feel as if I can't keep track of it.
+    All these people...
 
-        I really hope you can, now.
-        """
-        jump deskscreenintro
-    if julie_comp == False:
-        """
-        Time passes.
+    All their dreams...
 
-        Days go by.
+    Marked on paper and into my memories, indelible.
 
-        Here, on this calendar, the appointments of last month are all marked.
+    Yasu and Claire, on the first floor.
 
-        All these people...
+    Julie and Stefan, who occupy the second.
 
-        All their dreams...
+    Kim and Takeshi, on the third.
 
-        Marked on paper and into my memories, indelible.
+    Most of them have been my patients for a long time...
 
-        And, among them, the images and words from Julie's room still clearly ring, heavy.
-
-        Through her recalling her past life, I can still feel a light lingering accross the tunnel...
-        """
-        jump day3
+    While others have merely been a fleeting encounter.
+    """
+    jump deskscreenintro
 label mugintro:
     """
-    This mug...
+    This mug is so old...
 
-    It's so old...
+    And it brings back the sweet memories of our breakfasts together.
 
-    And it brings back so many sweet memories.
-
-    I miss them so much...
+    I miss those mornings so much...
     """
     jump deskscreenintro
 label photosintro:
-    if stefan_comp == True:
-        """
-        Stefan...
+    """
+    I used to make lots of photos, here in the hotel.
 
-        Even though he has always scared me...
-
-        I still worry about him a lot.
-
-        I hope everything is going good for him.
-        """
-        jump deskscreenintro
-    if stefan_comp == False:
-        """
-        When I was still a guest here...
-
-        I used to take many photos of the hotel and the guests.
-
-        Many of them are not here anymore.
-
-        And the others...
-
-        Well, we are not so friendly anymore.
-
-        Time passes and things change, right?
-
-        This reminds me...
-
-        A lot of time ago, Stefan was just like me.
-
-        He wanted to listen to people.
-
-        To know about their life.
-
-        Even though he often said he didn't care about others...
-
-        He spent a lot of time with some of the guests.
-
-        Just...
-
-        What happened then?
-        """
-        jump day4
+    Every time I look at them, I'm reminded of\nthe most beautiful moments and friends I have encountered here.
+    """
+    jump deskscreenintro
 label booksintro:
     if claire_comp == True:
         """
@@ -293,12 +264,12 @@ label lampintro:
         """
         jump day1
 label diaryintro:
-    if stories_comp <= 5:
+    if claire_comp == False and yasu_comp == False:
         """
         It's too soon to write today's entry...
         """
         jump deskscreenintro
-    if stories_comp == 6:
+    if claire_comp == True and yasu_comp == True:
         """
         Do I really want to go to sleep already?
         """
@@ -307,49 +278,104 @@ label diaryintro:
                 scene diary
                 with slowfade
                 """
-                Here in the Homunculus Hotel,\npeople find refuge from the world's danger and uncertainties.
+                Since I came here, each day has had the same routine...
 
-                They get here in order to find a place that could be safe.
+                Wake up.
 
-                A place that could help them get better.
+                Let the day flow.
 
-                That's why all the rooms are always occupied by someone.
+                Get back to the room.
 
-                And you can see them...
+                Now that I think about it...
 
-                Walking through the corridors.
+                Things weren't any different before.
 
-                Having a lonely breakfast.
+                But thanks to Yasu and Claire,\nI remembered that repetition can mean peace.
 
-                Passing by the courtyard...
+                A peaceful existence, that doesn't look for excitement in continuous events\nbut that enjoys both the stillness and dedication to personal thoughts and perseveration.
 
-                Each of them alone.
+                When I think about my life before arriving in the hotel, or even my life as a whole...
 
-                The first day I spent here seems so far away, now.
+                I realize how much all these elements have been strangers to me.
 
-                First a guest, and then a member of the staff.
+                And now I'm welcoming them into the house that my mind is.
 
-                I think it's been three years.
-
-                And I've been writing this diary only for the last two months.
-
-                I came to this hotel...
-
-                Well, because someone told me that\nthe rooms show the guests' personal and intimate dreams.
-
-                Dreams from the past.
-
-                Dreams of possible and multiple futures.
-
-                Dreams of fears or desired achievements.
-
-                But...
-
-                Even after all the time I spent here...
-
-                I'm still unable to see mine.
+                And once again, I lose myself into reveries about you...
                 """
-                jump day1
+                play movie "intro1.ogv" loop
+                show movie with slowdissolve
+                isa """
+                You\nknow\nwhat?
+                """
+                h "Hmm?"
+                isa """
+                I love\nhaving breakfast\nwith you.
+
+                It feels so...\npeaceful,\nfor once."""
+                h """
+                What do you mean?
+                """
+                isa """
+                Well,\nyou know...
+
+                Lately\nit's been\npretty stressful.
+                """
+                play movie "intro2.ogv" loop
+                show movie with dissolve
+                h "Do you\nsay that\nbecause of me?"
+                isa """
+                No,\nit's just...
+
+                You've been\nfeeling down\nand i'm worried\nfor you.
+                """
+                h """
+                You\ndon't have\nto be.
+
+                It's\nnot your fault\nafter all.
+
+                I'm just...\nso tired.
+                """
+                scene intro3
+                with slowdissolve
+                stop movie
+                isa "I know,\nbut you are\nso miserable..."
+                h """
+                Please\ndon't pity me.
+
+                I get\nenough of that\nat work.
+                """
+                isa """
+                Then maybe...
+
+                You should\ndo something\ndifferent.
+                """
+                h """
+                ...what?
+
+                Is this\nwhat it's\nabout?
+                """
+                scene intro4
+                with slowdissolve
+                isa """
+                I only want\nwhat's best\nfor you,\nyou know that.
+
+                If your job\ndoesn't make you\nhappy,\nthen-
+                """
+                h """
+                Enough.
+
+                I know\nwhat this\nis about.
+
+                After all,\nI don't pretend\nto be understood.
+                """
+                isa """
+                No,\nI understand!
+
+                You know\nI do!
+
+                I\nlove you\nso much!
+                """
+                jump segment2
             "No.":
                 "Maybe I'll take another look around."
                 jump deskscreenintro
@@ -2029,6 +2055,257 @@ label claire2:
         play music "day2.ogg" fadein(2)
         jump floor1_2
 
+######## START OF SEGMENT 2 #########################################################################################
+
+label segment2:
+    scene desk
+    with slowfade
+    play music "intro.ogg" fadein(2)
+    """
+    At one point, we started arguing a lot.
+
+    Everyday a struggle was hidden somewhere.
+
+    There was not one elefant in the room,\nthey filled the whole apartment.
+
+    It's true, I could not stand the idea of you doing that kind of job...
+
+    Of you getting involved with different people each night.
+
+    Of you risking your life like that, for your freedom.
+
+    I know you desired it more than anything else, but...was that much really worth it?
+
+    Even now, it's difficult for me to think that you didn't suffer.
+
+    But I'm left with no answers...
+
+    I don't know how you truly felt.
+
+    At our beginning together we used to talk a lot,\ndiscussing everything that happened between us.
+
+    Then, through time, we stopped,\nas we got more and more involved with our own things.
+
+    That makes me understand that time really changes people for the worst, sometimes.
+
+    And now I can't do more than remembering and go on through the days.
+
+    Without you...
+    """
+    jump deskscreen1
+label deskscreen1:
+    call screen desk1
+label flower1:
+    """
+    Well watered today, too.
+
+    Are you watering yours, I wonder?
+
+    Or...do you even keep flowers, anymore?
+
+    ...are you even still alive?
+
+    Oh God, that's so sad...I can't...
+    """
+    jump deskscreen1
+label calendar1:
+    if julie_comp == True:
+        """
+        Dear Julie...
+
+        Time passes endlessly.
+
+        Sometimes slowly, other times too rapidly.
+
+        And I often can't keep track of it.
+
+        But I hope you can, now.
+        """
+        jump deskscreen1
+    if julie_comp == False:
+        """
+        Each time I look at the appointments of the month,\nand the names written on the calendar...
+
+        I think about their voices.
+
+        What stories they have to tell, what lives I can see through their recallings.
+
+        And, among them, the images and words from Julie's room still clearly ring, heavy.
+
+        Thanks to her discussing her past...\nI often see a light lingering accross the tunnel I'm walking through...
+        """
+        jump day3
+label mug1:
+    """
+    This mug is so old...
+
+    And it brings back so many sweet memories.
+
+    I miss them so much...
+    """
+    jump deskscreen1
+label photos1:
+    if stefan_comp == True:
+        """
+        Stefan...
+
+        Even though he has always scared me...
+
+        I still worry about him a lot.
+
+        I hope everything is going good for him.
+        """
+        jump deskscreen1
+    if stefan_comp == False:
+        """
+        When I was still a guest here...
+
+        I used to take many photos of the hotel and the guests.
+
+        Many of them are not here anymore.
+
+        And the others...
+
+        Well, we are not so friendly anymore.
+
+        Time passes and things change, right?
+
+        This reminds me...
+
+        A lot of time ago, Stefan was just like me.
+
+        He wanted to listen to people.
+
+        To know about their life.
+
+        Even though he often said he didn't care about others...
+
+        He spent a lot of time with some of the guests.
+
+        Just...
+
+        What happened then?
+        """
+        jump day4
+label books1:
+    """
+    All these books...
+
+    I'll never grow a collection as huge as Claire's.
+
+    But it's nice to always remember that we shared an interest.
+
+    I hope that, wherever she is, she's still reading.
+    """
+    jump deskscreen1
+label lamp1:
+    """
+    This lamp always reminds me of Yasu's light.
+
+    I wonder if he is with his wife, now...
+    """
+    jump deskscreen1
+label diary1:
+    if stefan_comp == False and julie_comp == False:
+        """
+        It's too soon to write today's entry...
+        """
+        jump deskscreen1
+    if stefan_comp == True and julie_comp == True:
+        """
+        Do I really want to go to sleep already?
+        """
+        menu:
+            "Yes.":
+                scene diary
+                with slowfade
+                """
+                I'm not used to question myself, that's why Stefan scared me so much.
+
+                I couldn't stand his questions, or anything he had to say to me.
+
+                I've always knew that what he said was the truth, and that's why I didn't want to listen.
+
+                That's the same you did: telling me the truth about the world.
+
+                But it pointed out all my mistakes, constantly.
+
+                Talking with Julie was more pleasant, but still...
+
+                Nonetheless, it was difficult.
+
+                I now realize that as she confronted her memories, I confronted mine.
+
+                And all my questions were not for her, but for myself.
+                """
+                play music "toherenevercome.ogg" fadein(2)
+                $ renpy.pause(0.5)
+                scene morning1
+                with slowfade
+                h """
+                Listen,\nIsabelle.
+
+                I thought\nabout it,\nand...
+
+                I think\nit's better if\nwe break up.
+                """
+                isa "Yeah,\nI figured\nas much..."
+                h """
+                I'm sorry,\nbut\nI cant go on\nlike this.
+
+                It's...
+                """
+                isa "Is it\nabout\nyour job?"
+                scene morning2
+                with slowfade
+                h """
+                Partly.
+
+                You know\nhow important it is,\nfor me.
+                """
+                isa """
+                Yeah,\nsure.
+
+                It's more\nimportant than me,\nI know.
+                """
+                h """
+                Why do you\nalways have\nto compare it\nto yourself?
+
+                This thing\nis not\nabout\nyou.
+
+                I told you\na billion times.
+                """
+                isa """
+                How can it\nnot be about\nme too?
+
+                Do you know\nhow it feels?
+
+                How it\nfeels to...
+
+                Know you're\nout with\nsomeone else.
+
+                For money.
+
+                Every night.
+
+                And\nI'm here,\nalone.
+
+                I don't care\nif it's\njust a job.
+
+                I just\ndon't want to\nfeel like this\nanymore.
+
+                So yeah,\ndo whatever\nyou want.
+
+                Just\nleave me\nalone.
+                """
+                stop music fadeout(2)
+                scene morning3
+                with slowfade
+                jump segment3
+            "No.":
+                "Maybe I'll take another look around."
+                jump deskscreen1
+
 label day3:
     $ cat = False
     $ cat_pet = False
@@ -2805,3 +3082,689 @@ label stefan2:
     stop movie
     play music "day3.ogg" fadein(2)
     jump floor2_2
+
+######## START OF SEGMENT 3 #########################################################################################
+
+label segment3:
+    scene desk
+    with slowfade
+    play music "intro.ogg" fadein(2)
+    """
+    Then, we left each other, like many do at some point.
+
+    Things start, and then end.
+
+    Stories have a conclusion, and obviously an ending too.
+
+    This is what I've tried telling myself for a lot of time.
+
+    But now...
+
+    Now it's too difficult.
+
+    Too heavy.
+
+    I can help others in sustaining themselves and be better,\nbut I really can't help myself.
+    """
+    jump deskscreen2
+label deskscreen2:
+    call screen desk2
+label flower2:
+    if kim_comp == True:
+        """
+        Is it possible to see someone's face when we look at a certain flower?
+
+        Because that's what happens when I look at them, now.
+
+        I think about you, thanks to Kim's teaching.
+
+        Love truly is absolute, and never passes.
+
+        It may look towards someone else,\nbut if we were particularly fond of someone, we will always keep a fragment of that love with us.
+        """
+        jump deskscreen2
+    if kim_comp == False:
+        """
+        Fresh like a blooming flower, so was Kim.
+
+        Tormented by love, just like me.
+
+        Hoping for a better future...not so much like me.
+        """
+        jump day6
+label calendar2:
+    """
+    Dear Julie...
+
+    Time passes endlessly.
+
+    Sometimes slowly, other times too rapidly.
+
+    And I often can't keep track of it.
+
+    But I hope you can, now.
+    """
+    jump deskscreen2
+label mug2:
+    if takeshi_comp == False:
+        """
+        To be in love with our dreams...
+
+        To talk about them feverishly...
+
+        Thanks to you, Takeshi, I learned how important this is.
+
+        And now that I've remembered, I look at this mug very differently.
+        """
+        jump deskscreen2
+    if takeshi_comp == False:
+        """
+        This mug always gets boiling hot when I pour something into it.
+
+        It seems like a magic.
+
+        A terrible one.
+
+        But it's just like Takeshi was...
+
+        Cold when empty, and boiling hot when he discussed his desires.
+        """
+        jump day5
+label photos2:
+    """
+    Stefan...
+
+    Even though he has always scared me...
+
+    I still worry about him a lot.
+
+    I hope everything is going good for him.
+    """
+    jump deskscreen2
+label books2:
+    """
+    All these books...
+
+    I'll never grow a collection as huge as Claire's.
+
+    But it's nice to always remember that we shared an interest.
+
+    I hope that, wherever she is, she's still reading.
+    """
+    jump deskscreen2
+label lamp2:
+    """
+    This lamp always reminds me of Yasu's light.
+
+    I wonder if he is with his wife, now...
+    """
+    jump deskscreen2
+label diary2:
+    if kim_comp == False and takeshi_comp == False:
+        """
+        It's too soon to write today's entry...
+        """
+        jump deskscreen2
+    if kim_comp == True and takeshi_comp == True:
+        """
+        Do I really want to go to sleep already?
+        """
+        menu:
+            "Yes.":
+                scene diary
+                with slowfade
+                """
+                aaa
+                """
+                stop music fadeout(2)
+                jump ending
+            "No.":
+                "Maybe I'll take another look around."
+                jump deskscreen2
+
+label day5:
+    stop music fadeout(2)
+    scene black
+    with fade
+    scene day1
+    with quickfade
+    $ renpy.pause(3)
+    play music "day1.ogg" fadein(2)
+    play movie "smoking.ogv" loop
+    show movie with slowdissolve
+    """
+    aaa
+    """
+    scene corridorf3_1
+    with slowfade
+    stop movie
+    """
+    aaa
+    """
+    jump floor3_1
+label floor3_1:
+    if takeshi_comp == False:
+        call screen floor3_1
+    if takeshi_comp == True:
+        stop music
+        scene desk
+        with slowfade
+        play music "intro.ogg" fadein(3)
+        $ renpy.pause(3)
+        jump deskscreen2
+#label jacket:
+    #"""
+    #aaa
+    #"""
+    #jump floor3_1
+#label painting1:
+    #"""
+    #aaa
+    #"""
+    #jump floor3_1
+#label plant1:
+    #"""
+    #aaa
+    #"""
+    #jump floor3_1
+label takeshi1:
+    if takeshi_comp == True:
+        """
+        Julie's session is finished.
+
+        I should check on Stefan.
+        """
+        jump floor3_1
+    if takeshi_comp == False:
+        """
+        aaa
+        """
+        stop music fadeout(4)
+        scene door305_1
+        with slowfade
+        $ renpy.pause(1)
+        scene door305_2
+        with dissolve
+        $ renpy.pause(1)
+        scene door305_3
+        with dissolve
+        $ renpy.pause(1)
+        scene takeshiframe
+        with dissolve
+        $ renpy.pause(0.5)
+        play movie "takeshi.ogv" loop
+        show movie with slowdissolve
+        #play music "julie.ogg" fadein(4)
+        """
+        aaa
+        """
+        $ takeshi_comp = True
+        $ stories_comp += 1
+        stop music fadeout(2)
+        scene corridorf2
+        with slowfade
+        stop movie
+        play music "day1.ogg" fadein(2)
+        jump floor3_1
+label kim1:
+    """
+    aaa
+    """
+    jump floor3_1
+
+label day6:
+    stop music fadeout(2)
+    scene black
+    with fade
+    scene day1
+    with quickfade
+    $ renpy.pause(3)
+    play music "day3.ogg" fadein(2)
+    play movie "listening.ogv" loop
+    show movie with slowdissolve
+    """
+    aaa
+    """
+    scene corridorf3_2
+    with slowfade
+    stop movie
+    """
+    aaa
+    """
+    jump floor3_2
+label floor3_2:
+    if kim_comp == False:
+        call screen floor2_2
+    if kim_comp == True:
+        stop music
+        scene desk
+        with slowfade
+        play music "intro.ogg" fadein(3)
+        $ renpy.pause(3)
+        jump deskscreen2
+#label jacket2:
+    #"""
+    #aaa
+    #"""
+    #jump floor3_2
+#label painting2:
+    #"""
+    #aaa
+    #"""
+    #jump floor3_2
+#label plant2:
+    #"""
+    #aaa
+    #"""
+    #jump floor3_2
+#label letter2:
+    #"""
+    #aaa
+    #"""
+    #jump floor3_2
+label takeshi2:
+    """
+    Not today, unfortunately.
+    """
+    jump floor3_2
+label kim2:
+    stop music fadeout(4)
+    scene door306_1
+    with slowfade
+    $ renpy.pause(1)
+    scene door306_2
+    with dissolve
+    $ renpy.pause(1)
+    scene door306_3
+    with dissolve
+    $ renpy.pause(1)
+    scene stefanframe
+    with dissolve
+    $ renpy.pause(0.5)
+    play movie "kim.ogv" loop
+    show movie with slowdissolve
+    #play music "stefan.ogg" fadein(4)
+    """
+    aaa
+    """
+    s """
+    aaa
+    """
+    $ kim_comp = True
+    $ stories_comp += 1
+    stop music fadeout(2)
+    scene corridor
+    with slowfade
+    stop movie
+    play music "day3.ogg" fadein(2)
+    jump floor3_2
+
+######## ENDING #########################################################################################
+
+label ending:
+    scene black
+    with slowfade
+    scene ending
+    with slowfade
+    play music "toherenevercome.ogg" fadein(2)
+    $ renpy.pause(0.5)
+    scene remufullui
+    with slowfade
+    i """
+    Is that...
+
+    Y-you...?
+    """
+    her """
+    Yes.
+
+    It's,\nuhm...
+
+    It's been\na longtime?
+    """
+    i """
+    A longtime?
+
+    A...
+
+    You\ndisappeared.
+
+    You\nabandoned\nme.
+
+    You...
+    """
+    her """
+    I know...
+
+    And\nI'm\nsorry.
+
+    But you\nmust understand\nthat...
+
+    Well.
+
+    I'm\nsuffocating.
+    """
+    scene remunotebook
+    with slowdissolve
+    her """
+    You always\nbuilt up\nall these\nwalls...
+
+    It was impossible\nfor me\nto really get\nin touch with you.
+    """
+    i "So\nit's always\nmy fault..."
+    her """
+    No...
+
+    It's just\nwho you are.
+
+    And I've\nnever\naccepted it.
+
+    I just stared\nwhile you were\nalways writing\non your notebook.
+
+    It was\nour fault.
+    """
+    scene remunoui
+    with slowdissolve
+    her """
+    I\nmissed\nyou,\nfor all\nthis time.
+
+    While\nI was\naway...
+
+    I always thought\nabout\nyou.
+
+    And I\nwanted to...
+
+    ...
+    """
+    scene remugetup1
+    with slowdissolve
+    $ renpy.pause(2)
+    scene remugetup2
+    with slowdissolve
+    $ renpy.pause(2)
+    scene hug1
+    with slowdissolve
+    $ renpy.pause(2)
+    scene hug2
+    with slowdissolve
+    $ renpy.pause(2)
+    scene hug3b
+    with slowdissolve
+    $ renpy.pause(2)
+    scene hug3
+    with slowdissolve
+    her "I\nmissed\nthis."
+    i """
+    I...
+
+    I\ndon't know\nwhat to\nsay...
+
+    Remu,\nI...
+
+    So\nmuch time\nhas passed.
+    """
+    re """
+    Do you\nreally care\nabout time?
+
+    We can\nrewrite it.
+
+    We can\ngo back.
+
+    At least in\nhere...
+
+    In\nyour\ndreams.
+    """
+    scene hug4
+    with slowdissolve
+    i """
+    In my\ndreams...
+    """
+    scene hug5
+    with slowdissolve
+    i """
+    I\nalways see\nyou.
+    """
+    scene hug7
+    with slowdissolve
+    re """
+    I know...
+
+    But\nI am here\nnow.
+    """
+    i """
+    Where\nhave you\nbeen?
+
+    I\nmissed\nyou.
+    """
+    stop music fadeout (2)
+    re """
+    I won't\ngo\nanywhere.
+
+    Anymore...
+    """
+    play sound "ending.ogg" fadein(2)
+    scene school1
+    with slowdissolve
+    $ renpy.pause(2)
+    scene school1
+    with slowdissolve
+    i """
+    You told me\nthe same thing\nthat time...
+
+    Remember?
+    """
+    re """
+    Yes...
+
+    School was\nalmost\nover.
+
+    It was\na hot summer...
+
+    And we\nwere together.
+    """
+    i "As usual..."
+    re """
+    Yes,\nas usual.
+    """
+    scene school2
+    with slowdissolve
+    i """
+    At\nthat\ntime...
+
+    We knew\neach other\nsince the\nyear before.
+
+    We\nalready were\nbest friends.
+
+    Together\nagainst\nthe world.
+    """
+    scene school3
+    with slowdissolve
+    re """
+    I\nalways thought\nyou had...
+
+    Something\nspecial\nwithin you.
+
+    And,\nback then...
+
+    Your smile\nmade me\nso happy...
+
+    Every day\nI went to school\njust because\nof that.
+
+    You were\nmy reason\nto live.
+
+    I don't\nsay that\nlightly...
+
+    Without\nyou...
+
+    Nothing\nwould have had\nsense.
+
+    And\nthat day...
+    """
+    scene school4
+    with slowdissolve
+    re "All these\nfeelings..."
+    scene school5
+    with slowdissolve
+    re "Suddenly\naccumulated."
+    i """
+    I still\nremember...
+
+    You\nmoved toward\nthe door...
+
+    Then\nstopped.
+    """
+    scene remu1
+    with slowdissolve
+    i "And\nslowly..."
+    scene remu2
+    with slowdissolve
+    i "You turned\ntoward me."
+    show remu3:
+        yalign 0.0
+    with slowdissolve
+    $ renpy.pause(2)
+    show remu3:
+        subpixel True
+        yalign 0.0
+        linear 6.0 yalign 1.0
+    $ renpy.pause(6)
+    show remu3b:
+        yalign 1.0
+    with slowdissolve
+    i """
+    You\nsmiled back\nat me.
+
+    And that became\nthe most\nbeautiful day\nof my life.
+    """
+    scene isabelle1
+    with slowdissolve
+    re "You couldn't\nbelieve it,\nhuh?"
+    i """
+    For\nsomeone\nlike me...
+
+    To be\nloved\nby you...
+
+    I\nreally couldn't,\nyeah.
+    """
+    i """
+    Even when\nyou got away...
+
+    I just\nstood there.
+
+    I don't know\nwhy I've never\ntold you that.
+
+    But...
+
+    Do you think\nour destiny was\nalready set?
+    """
+    scene love1
+    with slowdissolve
+    i """
+    I've always known\nyou coldn't\nlove me\ncompletely.
+
+    I knew\nyour voice\nwasn't happy.
+
+    But sad,\nevery night.
+
+    And that\nthose\ntears...
+
+    Meant\nyou didn't feel\nthat much.
+    """
+    scene love2
+    with slowdissolve
+    i """
+    I knew\nyour work\nwas important.
+
+    And that you\npoured\nall yourself\ninto it.
+
+    To me,\nthat couldn't\nmake sense,\nthough.
+
+    And I\nalways thought...
+
+    I\nwas\nmiserable.
+
+    Just like\nyour clients.
+
+    I felt\nterrible.
+
+    And\nin the end...
+
+    I couldn't\nlove you\nlike\nI should have.
+    """
+    scene love3
+    with slowdissolve
+    re """
+    People\nalways think\nthat...
+
+    People\nlike me\nare\nunhappy.
+
+    I knew you\nthought that,\ntoo.
+
+    Many times\nI tried\nto talk...
+
+    To\nexpress\nmy feelings.
+
+    But you\ncouldn't\nlisten.
+
+    You\ndidn't\nwant to.
+
+    So\nI ran\naway.
+
+    And\ndecided that\nit was you\nwho disappeared.
+
+    Just to\nnot\nsuffer.
+    """
+    show remu3:
+        yalign 1.0
+    with slowdissolve
+    $ renpy.pause(2)
+    show remu3:
+        subpixel True
+        yalign 1.0
+        linear 6.0 yalign 0.0
+    $ renpy.pause(6)
+    scene remu2b
+    with slowdissolve
+    $ renpy.pause(2)
+    scene remu1b
+    with slowdissolve
+    $ renpy.pause(2)
+    scene morning1
+    with slowdissolve
+    i "I dreamt\nthat morning..."
+    scene morning2
+    with slowdissolve
+    i "Ever\nsince..."
+    scene morning3
+    with slowdissolve
+    i "The morning\nyou\ntold\nme..."
+    scene morning4
+    with slowdissolve
+    i "How much\nunsatisfied\nyou were."
+    scene morning5
+    with slowdissolve
+    i "And how\nselfish\nI was."
+    re "I know..."
+    show morning6a:
+        yalign 1.0
+    with slowdissolve
+    re "But\nin\nhere..."
+    show morning6:
+        yalign 1.0
+    with slowdissolve
+    show morning6:
+        subpixel True
+        yalign 1.0
+        linear 6.0 yalign 0.0
+    $ renpy.pause(6)
+    show morning6b:
+        yalign 0.0
+    with slowdissolve
+    re "We can\ngo back."
+    scene credits
+    with slowdissolve
+    $ renpy.pause(30)
+    stop sound fadeout(4)
+    scene black
+    with slowfade
+    return

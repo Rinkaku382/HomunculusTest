@@ -12,8 +12,8 @@ screen deskintro:
 
 screen desk1:
     imagemap:
-        idle "desk1.png"
-        hover "desk1h.png"
+        idle "desk.png"
+        hover "deskh.png"
         hotspot(49, 114, 279, 647) action Jump ("flower1")
         hotspot(351, 0, 625, 616) action Jump ("calendar1")
         hotspot(554, 651, 736, 203) action Jump ("diary1")
@@ -24,8 +24,8 @@ screen desk1:
 
 screen desk2:
     imagemap:
-        idle "desk2.png"
-        hover "desk2h.png"
+        idle "desk.png"
+        hover "deskh.png"
         hotspot(49, 114, 279, 647) action Jump ("flower2")
         hotspot(351, 0, 625, 616) action Jump ("calendar2")
         hotspot(554, 651, 736, 203) action Jump ("diary2")

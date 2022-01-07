@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 158: end of line expected.
-(Perhaps you left out a " at the end of the first line.)
-    """
-            """
-              ^
+The label day3 is defined twice, at
+  File "game/script.rpy", line 2309 and
+  File "game/script.rpy", line 3225.
 
-Ren'Py Version: Ren'Py 7.4.6.1693
-Tue Jan  4 16:28:26 2022
+Ren'Py Version: Ren'Py 7.3.5.606
+Fri Jan 07 13:48:09 2022

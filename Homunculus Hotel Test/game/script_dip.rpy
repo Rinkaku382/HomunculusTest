@@ -19,7 +19,7 @@ define her = Character("Her", color="#5d6f5c", what_xpos=1675, what_ypos=-450, w
 define r = Character("Remu", color="#5d6f5c", what_xpos=255, what_ypos=-450, who_ypos=-550, who_xpos=12)
 define re = Character("Remu", color="#5d6f5c", what_xpos=1675, what_ypos=-450, who_ypos=-550, who_xpos=1405)
 
-label start:
+label intro:
     stop music fadeout(2)
     scene black
     with slowfade
