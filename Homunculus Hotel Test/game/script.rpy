@@ -3378,7 +3378,7 @@ label kim2:
     scene door306_3
     with dissolve
     $ renpy.pause(1)
-    scene stefanframe
+    scene kimframe
     with dissolve
     $ renpy.pause(0.5)
     play movie "kim.ogv" loop
