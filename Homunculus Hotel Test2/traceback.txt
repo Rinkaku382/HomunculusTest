@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 3240, in script
+    call screen floor3_1
+ScriptError: could not find label 'jacket1'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/main.py", line 617, in main
+    run(restart)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/execution.py", line 922, in run_context
+    context.run()
+  File "game/script.rpy", line 3240, in script
+    call screen floor3_1
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/script.py", line 918, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'jacket1'.
+
+Windows-10-10.0.19041
+Ren'Py 7.4.6.1693
+Homunculus Hotel Test 1.0
+Fri Jan  7 22:12:25 2022
