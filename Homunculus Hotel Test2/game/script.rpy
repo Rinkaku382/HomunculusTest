@@ -3289,8 +3289,44 @@ label takeshi1:
         show movie with slowdissolve
         play music "takeshi.ogg" fadein(4)
         """
-        aaa
+        To burn with desire...
+
+        To burn with desire,\nbut in a cold and windy world.
+
+        To gently fall on the ground like snowflake,\nunique in a vast group and yet seemingly identical.
+
+        It has always been strange to talk with Takeshi and to describe him,\nbecause my words never seemed enough.
+
+        Somehow, he constantly managed to\nescape from my grasp.
+
+        I've never been able to entirely capture the image of him.
         """
+        i "Hello Takeshi..."
+        menu:
+            "What's on your mind today?":
+                t """
+                I've been\nthinking\nand observing,\nas usual.
+
+                Today\nthe snow fell\nmore ferociously.
+
+                It seems\nthe dream\nis changing.
+
+                Which means that\nI am.
+
+                And the world is,\ntoo,\nalongside me.
+
+                It's a strange\nsensation.
+
+                This snow\nis warmer.
+                """
+                menu:
+                    "Warmer? How so?"
+                    "How do you know the world is changing?":
+                        t """
+                        The world\nconstantly changes,\nIsabelle.
+
+                        At each second passing,\nwe experience\na reality that\nis different from\nthe previous one.
+                        """
         $ takeshi_comp = True
         $ stories_comp += 1
         stop music fadeout(2)
@@ -3399,7 +3435,113 @@ label kim2:
 
             Today is\na calm day.
 
-            
+            I just...
+            """
+            i "What is it?"
+            k """
+            The usual,\nIsabelle...
+
+            I'm\nwondering.
+            """
+    menu:
+        "...about him?":
+            k """
+            Well, no...
+
+            Not today,\nat least.
+
+            But,\nnow that you\nmention him...
+
+            Sometime I\nstill wonder\nwhat he's doing.
+
+            You know,\nlike...
+
+            Where\nis he\nnow?
+
+            What\nis he\ndoing?
+
+            While I'm\nhere...
+
+            How\nis he\nfeeling?
+            """
+            menu:
+                "Do you ever find an answer?":
+                    k """
+                    No...
+
+                    Obviously\nnot.
+
+                    Those are\nunanswerable questions.
+
+                    I will\nnever know,\nprobably.
+
+                    And I\ntry to think\nit's ok.
+
+                    I try to\nconvince myself.
+
+                    Sometimes it's\na whole job\nby itself,\nyou know?
+
+                    Forcing yourself\nto do something...
+
+                    To believe\nin something...
+
+                    Some people\ndo that\nall their life.
+
+                    But to me\nit's impossible.
+
+                    It's not\nwho I am.
+
+                    And not who\nI've always been,\neither.
+
+                    I can't help\nbut asking\nhow can others\ndo that?
+
+                    How is it\npossible?
+
+                    Forcing\nan idea\nover yourself...
+
+                    It's unbearable.
+                    """
+                "How does that make you feel?":
+                    k """
+                    Well...
+
+                    It's interesting,\nat times.
+
+                    Not everytime,\nbut sometimes.
+
+                    Because\nI can imagine\ninfinite possibilities.
+
+                    I picture them\nin my mind...
+
+                    I visualize\nthe colours.
+
+                    The rooms he\nmoves through.
+
+                    The various looks\nin his eyes.
+
+                    The words\nhe says.
+
+                    And everything\nbecomes more beautiful\nthan reality itself.
+
+                    In these moments\nI understand what\nlove is about.
+
+                    To find someone\ndear\nto you...
+
+                    And be interested\nin their existence.
+
+                    In what they could\ndo or be or say\nwhen you're not\nwith them.
+
+                    With who\nthey could become\nin the future.
+
+                    Or even\nwho they will be\nwhen you'll be\nmeeting them\nin a few hours.
+
+                    And I realize\nthese thoughts can\nbecome stories.
+
+                    But...
+                    """
+        "...about your novel?":
+            k """
+            aaa
             """
     $ kim_comp = True
     $ stories_comp += 1
