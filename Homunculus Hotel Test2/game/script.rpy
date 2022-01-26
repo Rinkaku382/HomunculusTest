@@ -3320,7 +3320,32 @@ label takeshi1:
                 This snow\nis warmer.
                 """
                 menu:
-                    "Warmer? How so?"
+                    "Warmer? How so?":
+                        t """
+                        It's quite\ndifficult to\ndescribe...
+
+                        I don't know\nif I can find\nthe right words.
+
+                        But what\nI mean\nis...
+
+                        This sno\nis burning\nme.
+
+                        Burning me\nwith the desire\nto act.
+
+                        I feel like\nthis world\nis a prison.
+
+                        I wander through\nthis endless land...
+
+                        And struggle\nto not lose\nmyself.
+
+                        And the\nonly way\nis through act.
+
+                        But\nwhat kind\nof act?
+
+                        And then...\nwhat is\nan act?
+
+                        What does it\nmean\nto act?
+                        """
                     "How do you know the world is changing?":
                         t """
                         The world\nconstantly changes,\nIsabelle.
