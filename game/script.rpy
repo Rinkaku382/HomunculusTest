@@ -40,19 +40,51 @@ label start:
     scene diary
     with slowfade
     """
-    Lonely, on a solitary evening...
+    Homunculus Hotel...
 
-    I start thinking about my past.
+    A place in which\npeople find refuge from the world's dangers and uncertainties.
+
+    They get here in order to find a place that could be safe,\none that could help them get better.
+
+    That's why all the rooms are always occupied by someone.
+
+    And you can see them, walking through the corridors\nor having a lonely breakfast.
+
+    Passing by the courtyard...each of them alone.
+
+    Why I came to this hotel...
+
+    Well, because someone told me that\nthe rooms can show the guests' personal and intimate dreams.
+
+    Dreams from the past.\nDreams of possible and multiple futures.\nDreams of fears or desired achievements.
+
+    But it's not so simple to understand them, right?
+
+    We can't always fully interpret our own dreams...
+
+    And that's my job, helping others in understanding the dreams that their rooms show.
+
+    The first day I spent here seems so far away, now.
+
+    I entered as a guest, but then, since I\ncouldn't see anything in my room, I got employed as a helper.
+
+    Maybe because of this job, mine has become a solitary existence.
+
+    I get to talk with lots of people during the day,\nsince my schedule is filled with meetings.
+
+    But then, in evenings such as this one,\nI find myself alone in my room.
 
     And, unable to resist to the forceful waves of memories,\nI just let myself go...
+
+    And yearn for you,\nfor your company.
     """
     stop music fadeout(2)
     scene black
     with slowerfade
     play music "toherenevercome.ogg" fadein(2)
     $ renpy.pause(0.5)
-    scene school2
-    with slowfade
+    play movie "intro1.ogv" loop
+    show movie with slowdissolve
     h """
     Isabelle...
 
@@ -116,75 +148,63 @@ label start:
 ######## START OF SEGMENT 1 #########################################################################################
 
 label segment1:
-    scene day0
-    with slowerfade
-    $ renpy.pause(3)
     play music "intro.ogg" fadein(3)
     scene desk
     with slowdissolve
+    stop movie
     """
-    I still remember our time together...
+    Oh...
+
+    Our time together still appears so clear to me.
 
     When we met, when we were together, when we left each other.
 
     Those events still affect me.
 
-    And, sometimes, that scenery fades into this hotel room.
-
-    Here in the Homunculus Hotel,\npeople find refuge from the world's danger and uncertainties.
-
-    They get here in order to find a place that could be safe,\none that could help them get better.
-
-    That's why all the rooms are always occupied by someone.
-
-    And you can see them, walking through the corridors or having a lonely breakfast.
-
-    Passing by the courtyard...each of them alone.
-
-    The first day I spent here seems so far away, now.
-
-    First a guest, then a member of the staff.
-
-    I think it's been three years,\nand I've been writing this diary only for the last two months.
-
-    I came to this hotel...
-
-    Well, because someone told me that\nthe rooms show the guests' personal and intimate dreams.
-
-    Dreams from the past.\nDreams of possible and multiple futures.\nDreams of fears or desired achievements.
-
-    But it's not so simple to understand them, right?
-
-    We can't always fully interpret our own dreams...
-
-    And that's my job, helping others in understanding the dreams that their rooms show.
+    And, then, just when that sceneries look clearer,\nthey suddenly fade into this hotel room.
 
     Ironic, though...
 
     I've helped a lot of people,\nbut I'm totally unable to see my dream.
 
-    And memories are now tormenting me with no end.
+    I'm unable to help myself.
+
+    And memories are now tormenting me.
 
     A torture that seems endless, in nights such as this...
 
     So I give up.
 
-    Tonight I just want to remember.
+    Whenever I look at all these items in my room,\nI feel different moments coming up to me.
 
-    Maybe thinking about the people I've met and helped will help me as well...
+    They knock on my door,\nand I reject them.
+
+    Because I fear that pain,\nthe pain of remembering.
+
+    But...enough of that.
+
+    I feel like I've been\nholding myself for too long, now.
+
+    Tonight I just want to try and remember harder.
+
+    I want to clearly focus on my past,\nand deeply explore it.
+
+    Can thinking about the people I've met and helped help me?
     """
     jump deskscreenintro
 label deskscreenintro:
     call screen deskintro
 label flowerintro:
     """
-    These flowers always make me remember...
+    These flowers always reminds me that...
 
     We used to fill our home with them.
 
     And every morning, after breakfast, we tended to them.
 
     It's only because of you that\nI try to keep these alive so hard.
+
+    And, somehow, that gives me strength.
     """
     jump deskscreenintro
 label calendarintro:
@@ -210,15 +230,21 @@ label calendarintro:
     Most of them have been my patients for a long time...
 
     While others have merely been a fleeting encounter.
+
+    But regardless, they've all been very important to me.
     """
     jump deskscreenintro
 label mugintro:
     """
     This mug is so old...
 
+    It's one of the few things I managed to bring here with me.
+
     And it brings back the sweet memories of our breakfasts together.
 
     I miss those mornings so much...
+
+    Sometimes I even childlishly ask myself:\nwill they ever come back?
     """
     jump deskscreenintro
 label photosintro:
@@ -226,6 +252,16 @@ label photosintro:
     I used to make lots of photos, here in the hotel.
 
     Every time I look at them, I'm reminded of\nthe most beautiful moments and friends I have encountered here.
+
+    Most of the people I took pictures of aren't here anymore.
+
+    But they still smile so happily and live through these images.
+
+    I guess this is what I've been searching through photography:\nto make people everlasting.
+
+    Have I succeeded?\nI guess so.
+
+    And maybe that's why I stopped.
     """
     jump deskscreenintro
 label booksintro:
@@ -233,28 +269,30 @@ label booksintro:
         """
         All these books...
 
-        I'll never grow a collection as huge as Claire's.
-
-        But it's nice to always remember that we shared an interest.
+        I'll never grow a collection as huge as Claire's...\nbut it's nice to always remember that we shared an interest.
 
         I hope she's still reading, wherever she is now.
         """
         jump deskscreenintro
     if claire_comp == False:
         """
-        Some books and graphic novels I really care about.
+        Some books and graphic novels that I really care about.
 
         The hotel's delivery service is very useful, I'd say.
 
         Without it I would have died of boredom.
 
-        This reminds me of...
+        All these books, words, thoughts remind me of...
 
         Claire.
 
-        She used to read lots and lots of books, everyday,\nas she was working on her various projects.
+        She used to read a lot, everyday,\nas she was working on her various projects.
 
-        And if I close my eyes, I can still remember that morning...
+        She was a hunter, constantly on the search for new ideas and images.
+
+        Of all the memories I have of her,\nthere is one I hold dearly.
+
+        The last morning I saw her.
         """
         jump day2
 label lampintro:
@@ -262,22 +300,34 @@ label lampintro:
         """
         This lamp always reminds me of Yasu's light.
 
-        I wonder if he is with his wife, now...
+        Not only the one in his room,\nbut also his inner light.
+
+        We all have one, inside of us.
+
+        For some it shines brighter,\nfor others it's dimmer.
+
+        But that's what makes as humans.
+
+        And his reflected the spirit of a wonderful human being.
+
+        I truly hope he is with his wife, now...
         """
         jump deskscreenintro
     if yasu_comp == False:
         """
-        Just a normal lamp.
+        Just a normal lamp,\n with the hotel's name written in gold on its base.
 
-        On the base the hotel's name is written in gold.
+        Its light is perfect:\nnot too strong, and not too weak.
 
-        Yasu, from the first floor, used to have the room with the best light in all the hotel.
+        It's soothing, warm, comforting.
 
-        I still remember the vast field...
+        Now that I think about it...\nYasu, from the first floor, had the best light in the entire hotel.
+
+        The vastness of the field...
 
         The sweet sound of the wind...
 
-        And Yasu's posure as he observed the horizon...
+        And Yasu's gaze as he observed the horizon...
         """
         jump day1
 label diaryintro:
@@ -303,23 +353,21 @@ label diaryintro:
 
                 Get back to the room.
 
-                Now that I think about it...
+                But, now that I think about it...\nthings weren't any different before.
 
-                Things weren't any different before.
-
-                But thanks to Yasu and Claire,\nI remembered that repetition can mean peace.
+                Thanks to Yasu and Claire,though,\nI remembered that repetition can mean peace.
 
                 A peaceful existence...
 
-                One that doesn't look for excitement in continuous events\nbut that enjoys both the stillness and dedication to personal thoughts and perseveration.
+                One that doesn't look for the excitement of continuous events\nbut that enjoys the stillness of and dedication to personal thoughts and perseveration.
 
                 When I think about my life before arriving in the hotel, or even my life as a whole...
 
-                I realize how much all these elements have been strangers to me.
+                I realize how much all these elements have been estranged to me\nby a life wasted in honour of a business company that didn't reflect me.
 
                 And now I'm welcoming them into the house that my mind is.
 
-                And once again, I lose myself into reveries about you...
+                And, once again, I lose myself into reveries about you...
                 """
                 stop music fadeout(2)
                 scene black
@@ -421,19 +469,19 @@ label day1:
     play movie "wakeup.ogv" loop
     show movie with slowdissolve
     """
-    It's early in the morning.
+    I wake up early in the morning with a strange headache,\nas always.
 
-    I wake up with a strange headache.
+    Not the best way to start the day, I guess...
 
-    Not the best way to start a day, I guess...
-
-    The light that comes from the window is soft, pale.
-
-    And my body finds it difficult to get up.
+    The light that comes from the window is soft, pale,\nand my body finds it difficult to get up.
 
     But it has to.
 
-    And so I force myself to lift my body...
+    I have to.
+
+    So I force myself...
+
+    Lift my body up...
 
     Pass my hands on my face...
 
@@ -447,21 +495,19 @@ label day1:
     """
     The first floor's corridor.
 
-    Silent and empty, as always.
+    It's been half a year since I started working here...
 
-    It's been a couple of months since I started working here.
+    I was worried,\nat first.
 
-    At first, I was worried.
-
-    The idea of an hotel which offered a support service to the guests still seemed...
+    The idea of an hotel that offers a support service to the guests still seems...
 
     Well, strange.
 
-    But I got confident with it.
+    But I grew confident with it.
 
     Both with the idea and the job itself.
 
-    I just have to visit some of them,\nand then spend some time with them, nothing too stressing.
+    I just have to visit and then spend some time with some of them,\nnothing too stressing.
 
     So here I am now...
     """
@@ -505,16 +551,42 @@ label dog1:
 label portrait1_1:
     """
     A portrait of the hotel's director.
+
+    Always elegant,\nalways radiant.
+
+    She's such a classy woman...
+
+    I wonder how she does it!
     """
     jump floor1_1
 label portrait2_1:
     """
-    The director is so beautifully painted in this one!
+    The director is so beautiful in this one!
+
+    Every time I see her tender smile, I get reminded of what elegance is.
+
+    To work and live like that, with elegance...
+
+    I'm so envious.
+
+    I would like to be like that.
+
+    But I constantly feel like I'm too rough.
+
+    But that's ok, I guess.
+
+    In the end, we are who we are.
+
+    And it's enough to be like that:\njust how we are.
     """
     jump floor1_1
 label mirror1:
     """
     Me, myself and I.
+
+    A beautiful person...
+
+    Right?
     """
     jump floor1_1
 label yasu1:
@@ -524,11 +596,6 @@ label yasu1:
         """
         jump floor1_1
     if yasu_comp == False:
-        """
-        Room 101.
-
-        It's occupied by a man named Yasu.
-        """
         stop music fadeout(4)
         scene door101_1
         with slowfade
@@ -546,19 +613,18 @@ label yasu1:
         show movie with slowdissolve
         play music "yasu.ogg" fadein(4)
         """
-        As I open the door and enter, I find myself in a vast field.
+        As I open the door and enter,\nI find myself in Yasu's vast field.
 
-        Yasu is right there, next to me, looking at the horizon.
+        He is right there, next to me,\nlooking at the horizon.
         """
         i """
         Hello,\nMr. Yasu.
         """
         menu:
             "How are you today?":
-                y "Oh, fine,\nthanks."
+                i "Is\neverything alright,\ntoday?"
+                y "Well...\nI'm so-so,\nthanks."
         y """
-        Just...
-
         I feel a little\nmore tired than usual.
 
         Anyway...
@@ -584,6 +650,11 @@ label yasu1:
         """
         menu:
             "Still up all night?":
+                i """
+                Still\nup all night?
+
+                Are you\nsleeping well\nlately?
+                """
                 y """
                 Hmm...
 
@@ -599,15 +670,16 @@ label yasu1:
 
                 The more\nI can't.
 
-                I realized,\nlately, that\nI want to sleep...
+                I realized,\nlately, that I do\nwant to sleep...
 
                 But the scenery\nis too beautiful.
                 """
             "What have you been up to?":
+                i "What\nhave you been\nup to?"
                 y """
-                Oh, the usual...
+                Oh,\njust the usual...
 
-                I just look\nat the field...
+                I look\nat the field...
 
                 And try to catch\nthe differences...
 
@@ -631,6 +703,7 @@ label yasu1:
         menu:
             "Maybe you wish to fly away?":
                 $ fly = True
+                i "Maybe you\nwish to\nfly away?"
                 y """
                 Hmmm...
 
@@ -772,7 +845,11 @@ label yasu1:
                 """
                 menu:
                     "Something tells me you succeeded.":
-                        ## Spostare questo pezzo come risposta al passaggio "It could mean that you feel alone."?
+                        i """
+                        Something\ntells me\nyou succeeded.
+
+                        You are a\nstrongwilled and\ngood man.
+                        """
                         y """
                         Who knows...
 
@@ -828,12 +905,15 @@ label yasu1:
 
                         And\nit doesn't matter\nwhat you aim at.
 
-                        You'll have\nto struggle\nanyway.
+                        You'll have\nto struggle\nin any case.
                         """
             "Are there thoughts that still haunt you?":
                 $ shame = True
+                i """
+                Are there\nthoughts\nthat still haunt\nyou?
+                """
                 y """
-                Sometimes\nI still wonder...
+                Sometimes\nI wonder...
 
                 How is\nmy family doing?
 
@@ -853,6 +933,11 @@ label yasu1:
                 """
                 menu:
                     "Why should you?":
+                        i """
+                        Don't you think\nyou're exaggerating\nit a little?
+
+                        Why\nshould you\nfeel ashamed?
+                        """
                         y """
                         I got\nthe easy way out.
 
@@ -869,9 +954,19 @@ label yasu1:
                         It feels\nas if I ran away.
                         """
                         menu:
-                            "Only you have that answer for that question.":
+                            "Only you have the answer for that question.":
+                                i """
+                                Only you have\nthe answer for\nthat question.
+
+                                Though I know\nhow difficult it\ncan be to\nunderstand that...
+                                """
                                 y "Probably, yeah..."
                             "It's not your fault for ending up in here.":
+                                i """
+                                It's not\nyour fault for\nending up\nin here.
+
+                                It just\nhappens,\nwether we\nchoose it\nor not.
+                                """
                                 y """
                                 I know, but...
 
@@ -978,6 +1073,11 @@ label yasu1:
                         """
                         menu:
                             "What kind of paintings she used to paint?":
+                                i """
+                                Oh,\nan artist!
+
+                                And what kind\nof paintings\nshe used to\npaint?
+                                """
                                 y """
                                 Sometimes\nabstracts.
 
@@ -991,6 +1091,11 @@ label yasu1:
                                 """
             "It could mean that you feel alone.":
                 $ alone = True
+                i """
+                Maybe...
+
+                It means that\nyou feel\nalone?
+                """
                 y """
                 Alone...?
 
@@ -1012,6 +1117,7 @@ label yasu1:
                 """
                 menu:
                     "Maybe sometime.":
+                        i "Sometimes\nmaybe,\nyes."
                         y """
                         Well, in any case...
 
@@ -1052,6 +1158,11 @@ label yasu1:
         """
         menu:
             "Often.":
+                i """
+                Yes...
+
+                Very often.
+                """
                 y """
                 You must have\nbeen very free,\nthen!
 
@@ -1059,6 +1170,7 @@ label yasu1:
                 """
                 menu:
                     "Is it related to something?":
+                        i "Is it related\nto something,\nanyway?"
                         y """
                         Nothing in particular,\nno.
 
@@ -1073,14 +1185,20 @@ label yasu1:
                         Gently swept away\nby the current.
                         """
                     "Have you dreamt of floating weeds?":
+                        i "...have you dreamt\nof floating weeds?"
                         y """
-                        No.
+                        Oh,\nno!
 
                         Only the field,\nas usual.
 
                         But I got\nthis image\n in my mind.
                         """
             "What do you mean?":
+                i """
+                Im not sure\nI follow you...
+
+                What\ndo you\nmean?
+                """
                 y """
                 You see...
 
@@ -1093,6 +1211,11 @@ label yasu1:
                 But free,\nas I could do what\nI wanted anyway.
                 """
             "Never.":
+                i """
+                No,\nnever.
+
+                I'm sorry.
+                """
                 y """
                 Well,\nthat's a pity,\nbut...
 
@@ -1102,10 +1225,16 @@ label yasu1:
                 """
                 menu:
                     "What's with the floating weeds?":
+                        i """
+                        But what's with\nthe floating weeds?
+
+                        What\ndo they\nmean?
+                        """
                         y """
                         Well...
                         """
                     "Is that how you feel today?":
+                        i "Is that\nthe way\nyou're feeling?"
                         y """
                         Yes,\nlooks like it.
 
@@ -1124,6 +1253,11 @@ label yasu1:
         """
         menu:
             "It's a very peaceful image, indeed.":
+                i """
+                Oh,\nI get it!
+
+                It's a\nvery peaceful image,\nindeed.
+                """
                 y """
                 Yes.
 
@@ -1132,6 +1266,11 @@ label yasu1:
                 Something\ntroubles me.
                 """
             "Yet, you dream of a field...":
+                i """
+                Yet,\nyou dream of\na field...
+
+                Do you think\nthese two things\nare connected?
+                """
                 y """
                 Maybe...
 
@@ -1146,15 +1285,16 @@ label yasu1:
 
         The more\nthis sensation\nabandons me.
         """
-        menu:
-            "Maybe you only have to accept it...":
-                i "And let it go,\nso that peace\nmay come."
-                y """
-                Yes.
+        i """
+        Maybe you only have to accept it...
 
-                I'm now\nsure\nof this.
-                """
-        y"""
+        And let it go,\nso that peace\nmay come.
+        """
+        y """
+        Yes.
+
+        I'm now\nsure\nof this.
+
         It's...
 
         Strange.
@@ -1186,12 +1326,17 @@ label yasu1:
         stop movie
         menu:
             "Are you sure?":
+                i """
+                ...really?
+
+                Are\nyou\nsure?
+                """
                 y """
                 Yes.
 
-                I finally am.
+                I\nfinally\nam.
 
-                I want to\npass away.
+                I want to\nmove beyond.
 
                 You see?
 
@@ -1207,6 +1352,8 @@ label yasu1:
                 I was just\nwaiting\nfor you.
 
                 To say\ngoodbye\nproperly.
+
+                To tell\nyou\nhow I feel.
 
                 And to\nthank you\nonce again.
 
@@ -1229,13 +1376,20 @@ label yasu1:
         play music "day1.ogg" fadein(2)
         jump floor1_1
 label claire1:
-    """
-    Room 102.
+    if claire_comp == True:
+        """
+        She's not here anymore...
+        """
+        jump floor1_1
+    if claire_comp == False:
+        """
+        Room 102...
 
-    It's occupied by a woman named Claire.
-    """
-    jump floor1_1
-    return
+        It's occupied by Claire\nbut she's not here, now.
+
+        Probably, she's wandering through the hotel,\ntalking with whoever she sees!
+        """
+        jump floor1_1
 
 label day2:
     $ discover = False
@@ -1253,13 +1407,13 @@ label day2:
     show movie with slowdissolve
     play music "day1.ogg" fadein(2)
     """
+    Hmm...
+
     Today seems like it could be a good day.
 
-    I woke up with your face in my mind and I was smiling while sleeping.
+    I woke up with your face in my mind, so I'm sure I dreamt of you.
 
-    Or at least I guess I was.
-
-    Well, I hope I was, actually.
+    Well, I hope I did, actually.
 
     But anyway...
 
@@ -1267,17 +1421,21 @@ label day2:
 
     And when I think about you...
 
-    There's always a mixture of happiness and melancholy.
+    I always feel a mixture of happiness and melancholy.
 
-    But the day feels less heavy.
+    And somehow the day feels less heavy.
     """
     scene corridor
     with slowfade
     stop movie
     """
-    Today it's the turn of the first floor again.
+    Today the first floor is empty.
 
-    So, room 101 and 102 and then the appointments for this week are almost over.
+    Usually the director's dog is here,\nbut maybe today she's with her.
+
+    Also, no guests around.
+
+    It's so lonesome...
     """
     jump floor1_2
 label floor1_2:
@@ -1295,6 +1453,14 @@ label portrait1_2:
     This portrait has been here since...
 
     Well, since forever.
+
+    I still remember my surprise\nwhen I first saw it!
+
+    For an instant...\nI fell in love with her.
+
+    Well, maybe I still am a bit infatuated...?
+
+    I mean...she's too beautiful!
     """
     jump floor1_2
 label portrait2_2:
@@ -1314,7 +1480,7 @@ label portrait2_2:
     jump floor1_2
 label mirror2:
     """
-    It's me.
+    It's me!
 
     Wait, are those new wrinkles?
 
@@ -1322,12 +1488,23 @@ label mirror2:
     """
     jump floor1_2
 label yasu2:
-    """
-    Room 101.
+    if yasu_comp = True:
+        "He's not here anymore..."
+    if yasu_comp = False:
+        """
+        Room 101...
 
-    It's occupied by a man named Yasu.
-    """
-    jump floor1_2
+        It's occupied by Yasu.
+
+        He's not here, now,\nhe's probably on his daily stroll around the hotel's courtyard.
+
+        Sometimes the rooms are too much to bear,\nso guests try to take a pause from their dream.
+
+        I really can't blame them.
+
+        This job, after all, is for me a pause from my memories.
+        """
+        jump floor1_2
 label claire2:
     if claire_comp == True:
         """
@@ -1365,6 +1542,11 @@ label claire2:
         """
         menu:
             "How are you today?":
+                i """
+                How are\nyou today?
+
+                How is it\ngoing with\nthe project?
+                """
                 c """
                 Oh, Isabelle...
 
@@ -1394,6 +1576,11 @@ label claire2:
                 """
         menu:
             "Is something distracting you?":
+                i """
+                What's the\nmatter?
+
+                Is something\ndistracting\nyou?
+                """
                 c """
                 I don't know!
 
@@ -1402,26 +1589,33 @@ label claire2:
                 But I can't even\nunderstand what.
                 """
             "You always work so much...":
-                menu:
-                    "Why don't you rest a little?":
-                        c """
-                        I can't!
+                i """
+                You always\nwork\nso much...
 
-                        Don't you\nunderstand?
+                Why don't you\nrest\na little?
+                """
+                c """
+                I can't!
 
-                        I'm in the middle\nof the project.
+                Don't you\nunderstand?
 
-                        I can't rest now!
+                I'm in the middle\nof the project.
 
-                        I'll rest\nwhen I'm dead!
+                I can't rest now!
 
-                        Oh...
+                I'll rest\nwhen I'm dead!
 
-                        Well...
-                        """
+                Oh...
+
+                Well...
+                """
         menu:
             "What about your dream, though?":
-                i "Have you seen\nanything particular,\nlately?"
+                i """
+                What about\nyour dream,\nthough?
+
+                Have you seen\nanything particular,\nlately?
+                """
                 c """
                 Hmm.
 
@@ -1432,6 +1626,13 @@ label claire2:
                 i "You sure?"
                 menu:
                     "It's ok if you don't want to talk about it, though.":
+                        i """
+                        You know I\ndon't want to\nintrude\ntoo much.
+
+                        I'm\njust\nworried.
+
+                        It's ok if\nyou don't want\nto talk about\nit,\nthough.
+                        """
                         c """
                         I'm still not ready,\nsorry...
 
@@ -1440,6 +1641,11 @@ label claire2:
                         I think\nI need\nsome company...
                         """
                     "You know the room doesn't lie.":
+                        i """
+                        You know\nthe room\ndoesn't\nlie.
+
+                        So please,\njust talk\nabout it.
+                        """
                         c """
                         Ok,\nfine...
 
@@ -1458,6 +1664,11 @@ label claire2:
                         It's killing me.
                         """
             "What are you up to, today?":
+                i """
+                So, what\nare you up to,\ntoday?
+
+                Something\nexciting?
+                """
                 c """
                 Nothing much.
 
@@ -1467,6 +1678,11 @@ label claire2:
                 """
                 menu:
                     "Is it an important scene?":
+                        i """
+                        Is it\nan important\nscene?
+
+                        And what's\nthe issue\nwith it?
+                        """
                         c """
                         Yes, it is.
 
@@ -1477,6 +1693,11 @@ label claire2:
                         I keep\ngetting stuck.
                         """
                     "You never told me about the whole project, though!":
+                        i """
+                        You never\ntold me about\nthe whole project,\nthough!
+
+                        What is it\nabout?
+                        """
                         c """
                         Yes,\nI know...
 
@@ -1486,6 +1707,11 @@ label claire2:
                         """
                         menu:
                             "What are you unsure about?":
+                                i """
+                                What are you\nunsure\nabout?
+
+                                What\nworries\nyou?
+                                """
                                 c """
                                 I just don't feel\nconfident enough.
 
@@ -1506,6 +1732,7 @@ label claire2:
         """
         menu:
             "What do you mean?":
+                i "What\ndo you\nmean?"
                 c """
                 In your job.
 
@@ -1521,6 +1748,11 @@ label claire2:
                 """
         menu:
             "You should take a pause and rest.":
+                i """
+                I think...
+
+                You should\ntake a pause\nand rest.
+                """
                 $ rest = True
                 c """
                 It's difficult, but...
@@ -1528,6 +1760,15 @@ label claire2:
                 I'll try, thanks.
                 """
             "Don't pressure yourself too much.":
+                i """
+                Just...
+
+                Don't pressure\nyourself\ntoo much.
+
+                Life is\nalready heavy\nby itself...
+
+                It gets worse\nif we're hard\nwith ourselves.
+                """
                 $ nopressure = True
                 c """
                 I know, but...
@@ -1572,7 +1813,12 @@ label claire2:
         Do you want\nto hear what\nI wrote?
         """
         menu:
-            "Yes, I'd be glad to.":
+            "Yes, I'd be glad to!":
+                i """
+                Of course!
+
+                I'd be\nglad.
+                """
                 c """
                 Great!
 
@@ -1591,6 +1837,11 @@ label claire2:
                 I'm writing\nvery little,\nlately.
                 """
             "I'm more interested in the process.":
+                i """
+                Hmm, no...
+
+                I'm\nmore interested\nin the process.
+                """
                 c "The process?"
                 i """
                 Yes...
@@ -1614,6 +1865,11 @@ label claire2:
                 """
         menu:
             "Has it ever happened before?":
+                i """
+                And...
+
+                Has it\never happened\nbefore?
+                """
                 c """
                 No.
 
@@ -1633,6 +1889,13 @@ label claire2:
                 """
                 menu:
                     "So you think that with others you could?":
+                        i """
+                        Oh,\nwait!
+
+                        So you think\nthat with others\nyou could?
+
+                        Is this\nwhat you mean?
+                        """
                         c """
                         Hmm...
 
@@ -1645,6 +1908,13 @@ label claire2:
                         menu:
                             "You could ask the other guests!":
                                 $ guests = True
+                                i """
+                                But...
+
+                                You could ask\nthe other\nguests!
+
+                                What do you\nthink\nabout it?
+                                """
                                 c """
                                 The other guests...
 
@@ -1717,19 +1987,33 @@ label claire2:
                                 Maybe\nit was love\nwhat inspired me...
                                 """
                             "Why don't you make something different, then?":
-                                menu:
-                                    "Like a novel, for example.":
-                                        $ sdifferent = True
-                                        c """
-                                        I don't know...
+                                $ sdifferent = True
+                                i """
+                                Why\ndon't you make\nsomething different,\nthen?
 
-                                        I made movies\nall my life.
+                                Like a novel,\nfor example.
+                                """
+                                c """
+                                I don't know...
 
-                                        I don't know\nif I'd be\ncapable.
+                                I made movies\nall my life.
 
-                                        Gues I'll\nthink about it.
-                                        """
+                                I don't know\nif I'd be\ncapable.
+
+                                And I think\nthat people should\nstick to\ntheir occupations.
+
+                                If you're\na director\nyou direct.
+
+                                If you're\na writer,\nyou write.
+
+                                But\nmaybe...
+
+                                Maybe it\ndoesn't have to\nbe like that.
+
+                                I'll\nthink about it\nI guess...
+                                """
                     "What's worrying you?":
+                        i "What's\nworrying\nyou?"
                         c """
                         You know,\nIsabelle...
 
@@ -1761,6 +2045,13 @@ label claire2:
                         """
                         menu:
                             "Working alone could be an interesting challenge.":
+                                i """
+                                Well...
+
+                                Working alone\ncould be an\ninteresting\nchallenge.
+
+                                Don't\nyou\nthink?
+                                """
                                 c """
                                 Well, yeah,\nmaybe it could...
 
@@ -1781,6 +2072,7 @@ label claire2:
                                 menu:
                                     "It's up to you to discover that.":
                                         $ discover = True
+                                        i "It's\nup to you to\ndiscover that."
                                         c """
                                         I don't know...
 
@@ -1793,6 +2085,11 @@ label claire2:
                                         """
                                     "Why don't you try and see what happens?":
                                         $ walone = True
+                                        i """
+                                        Why don't you\ntry and see\nwhat happens?
+
+                                        You\ncould have a\ngreat surprise!
+                                        """
                                         c """
                                         Well,\nif you say so...
 
@@ -1800,6 +2097,11 @@ label claire2:
                                         """
                                     "I think you should confront your dream. ":
                                         $ dream = True
+                                        i """
+                                        I know it's\ndifficult,\nbut...
+
+                                        I think you\nshould confront\nyour dream.
+                                        """
                                         c """
                                         Isabelle,\nplease.
 
@@ -1825,8 +2127,13 @@ label claire2:
         """
         menu:
             "Why?":
+                i """
+                Why?
+
+                What is it\nthat frightens\nyou?
+                """
                 c """
-                Hmm.
+                Hmm...
 
                 Ever since\nI was born,\npeople used to say\nthat it's useless\nto chase dreams.
 
@@ -1875,13 +2182,25 @@ label claire2:
                 But\nthe truth is\nthat I lost\nall my hope.
                 """
                 menu:
-                    "You'll find it again.":
+                    "You'll find it.":
+                        i """
+                        You'll\nfind it.
+
+                        I'm\nsure\nof this.
+
+                        And then\nyouìll be able\nto write\nagain.
+                        """
                         c """
                         Thanks,\nIsabelle.
 
                         Really.
                         """
                     "I'm here for you.":
+                        i """
+                        I'm here\nfor you.
+
+                        So please,\nstay\nstrong!
+                        """
                         c """
                         Thanks,\nIsabelle.
 
@@ -1964,6 +2283,11 @@ label claire2:
             """
             menu:
                 "You can still work on it!":
+                    i """
+                    Yes!
+
+                    You can\nstill work\non it!
+                    """
                     c """
                     Y-yeah...
 
@@ -2068,17 +2392,19 @@ label segment2:
     """
     At one point, we started arguing a lot.
 
-    Everyday a struggle was hidden somewhere.
+    A struggle was hidden somewhere, everyday.
 
-    There was not one elefant in the room,\nthey filled the whole apartment.
+    There was not only one elefant in the room...
 
-    It's true, I could not stand the idea of you doing that kind of job...
+    They filled the whole apartment.
+
+    It's true,\nI could not stand the idea of you doing that kind of job...
 
     Of you getting involved with different people each night.
 
-    Of you risking your life like that, for your freedom.
+    Of you risking your life like that,\njust for your freedom.
 
-    I know you desired it more than anything else, but...\nwas that much really worth it?
+    I know you desired it more than anything else, but...\nwas that really worth it?
 
     Even now, it's difficult for me to think that you didn't suffer.
 
@@ -2095,6 +2421,14 @@ label segment2:
     And now I can't do more than remembering and go on through the days.
 
     Without you...
+
+    ...
+
+    Well...
+
+    Four last items.
+
+    Four last memories.
     """
     jump deskscreen1
 label deskscreen1:
@@ -2134,7 +2468,7 @@ label calendar1:
 
         What stories they have to tell,\nwhat lives I can see through their recallings.
 
-        And, among them,\nthe images and words from Julie's room still clearly ring, heavy.
+        And, among them,\nthe images and words from Julie's first session still ring, heavy.
 
         Thanks to her discussing her past...\nI often see a light lingering accross the tunnel I'm walking through...
         """
@@ -2143,9 +2477,11 @@ label mug1:
     """
     This mug is so old...
 
-    And it brings back so many sweet memories.
+    And every time I drink from it,\nit brings back so many sweet memories.
 
-    I miss them so much...
+    Sometimes it's...
+
+    Overwhelming.
     """
     jump deskscreen1
 label photos1:
@@ -2158,6 +2494,8 @@ label photos1:
         I still worry about him a lot.
 
         I hope everything is going good for him.
+
+        And that those eyes are now closed,\nat rest.
         """
         jump deskscreen1
     if stefan_comp == False:
@@ -2166,7 +2504,7 @@ label photos1:
 
         I used to take many photos of the hotel and the guests.
 
-        Many of them are not here anymore.
+        Many of them have left the hotel.
 
         And the others...
 
@@ -2186,27 +2524,33 @@ label photos1:
 
         He spent a lot of time with some of the guests.
 
-        Just...
-
-        What happened then?
+        And when I think about him, the words from\none of our various sessions come to my mind.
         """
         jump day4
 label books1:
     """
     All these books...
 
-    I'll never grow a collection as huge as Claire's.
+    I'll never grow a collection as huge as Claire's...\nbut it's nice to always remember that we shared an interest.
 
-    But it's nice to always remember that we shared an interest.
-
-    I hope that, wherever she is, she's still reading.
+    I hope she's still reading, wherever she is now.
     """
     jump deskscreen1
 label lamp1:
     """
     This lamp always reminds me of Yasu's light.
 
-    I wonder if he is with his wife, now...
+    Not only the one in his room,\nbut also his inner light.
+
+    We all have one, inside of us.
+
+    For some it shines brighter,\nfor others it's dimmer.
+
+    But that's what makes as humans.
+
+    And his reflected the spirit of a wonderful human being.
+
+    I truly hope he is with his wife, now...
     """
     jump deskscreen1
 label diary1:
@@ -2224,13 +2568,13 @@ label diary1:
                 scene diary
                 with slowfade
                 """
-                I'm not used to question myself, that's why Stefan scared me so much.
+                I'm not used to question myself,\nthat's why Stefan always scared me so much.
 
                 I couldn't stand his questions, or anything he had to say to me.
 
-                I've always knew that what he said was the truth, and that's why I didn't want to listen.
+                I've always knew that what he said was the truth,\nthat's why I didn't want to listen.
 
-                That's the same you did: telling me the truth about the world.
+                That's the same you did:\ntelling me the truth about the world.
 
                 But it pointed out all my mistakes, constantly.
 
@@ -2241,11 +2585,21 @@ label diary1:
                 I now realize that as she confronted her memories, I confronted mine.
 
                 And all my questions were not for her, but for myself.
+
+                Still...I can't help but being scared by her, too.
+
+                By the intentions behind her words.
+
+                By the possibilities that hid in her past.
+
+                By what she decided to tell me and what she didn't say.
+
+                Maybe, both with Stefan and Julie,\nwhat isn't said is worst than what has been said.
                 """
                 play music "toherenevercome.ogg" fadein(2)
                 $ renpy.pause(0.5)
-                scene morning1
-                with slowfade
+                play movie "intro2.ogv" loop
+                show movie with dissolve
                 h """
                 Listen,\nIsabelle.
 
@@ -2260,8 +2614,6 @@ label diary1:
                 It's...
                 """
                 isa "Is it\nabout\nyour job?"
-                scene morning2
-                with slowdissolve
                 h """
                 Partly.
 
@@ -2279,8 +2631,6 @@ label diary1:
 
                 I told you\na billion times.
                 """
-                scene morning3
-                with slowdissolve
                 isa """
                 How can it\nnot be about\nme too?
 
@@ -2304,9 +2654,17 @@ label diary1:
 
                 Just\nleave me\nalone.
                 """
+                h """
+                It's...
+
+                It's not\nfor money...
+
+                You really\ncan't\nunderstand.
+                """
                 stop music fadeout(3)
                 scene desk
                 with slowfade
+                stop movie
                 jump segment3
             "No.":
                 "Maybe I'll take another look around."
@@ -2327,11 +2685,11 @@ label day3:
     """
     Sometimes I observe the hotel's courtyard.
 
-    It's almost empty, in the morning...
+    It's almost empty, in the early mornings...
 
-    And the soft breeze that caresses me, helps me concentrate.
+    And the soft breeze that caresses me helps me concentrate.
 
-    And get ready for the day.
+    And get mentally ready for the day.
 
     It's in moments like these that I can think more straightly.
 
@@ -2345,15 +2703,13 @@ label day3:
     """
     And here I am.
 
-    The second floor, finally.
+    The second floor.
 
-    I'm almost halfway through the month, now.
+    The light here is always so smooth...
 
-    But I can't stop worrying.
+    So calming.
 
-    I almost don't know Julie, yet.
-
-    Will it go well?
+    Ironic, since the rooms are mostly the emotionally heaviest of all the hotel.
     """
     jump floor2_1
 label floor2_1:
@@ -3421,6 +3777,9 @@ label stefan2:
                     I'm sorry\nto disappoint\nyou.
                     """
                     i "Then what\nis it?"
+                    scene stefanend
+                    with slowdissolve
+                    stop movie
                     s """
                     ...
 
@@ -3473,11 +3832,15 @@ label stefan2:
                             s """
                             For myself...
 
-                            I guess.
+                            I\nguess.
+
+                            Whatever that\nmeans...
+
+                            With\nor without\nhumanity.
                             """
         "What makes you think we're not humans anymore?":
             s """
-            Yeah,\nright.
+            Hmm,\nwell...
 
             Let's put\neverything\non the table.
 
